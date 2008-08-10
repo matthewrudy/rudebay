@@ -1,3 +1,4 @@
+require 'net/http'
 module Rudebay
   class Twitterer
     def initialize(username, password)
@@ -16,6 +17,20 @@ module Rudebay
       else
         res.error!
       end
+    end
+    
+    REPLY_TEMPLATES = [
+      "Yo, :user_name, :message",
+      ":message, :user_name",
+      ":user_name, mate, :message",
+    ]
+    def reply_to!(to_user, message)
+      template = REPLY_TEMPLATES[rand(REPLY_TEMPLATES.length)]
+      reply = template.dup
+      reply.sub!(':user_name', "@#{to_user}")
+      reply.sub!(':message', message)
+      
+      self.twitter!(reply)
     end
   end
 end
