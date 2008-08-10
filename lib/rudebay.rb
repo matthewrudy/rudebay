@@ -16,5 +16,12 @@ module Rudebay
     def config
       @config ||= prepare_config
     end
+    
+    def do!(item_id, reply_to)
+      watcher = Watcher.new(item_id)
+      message = Describer.describe!(watcher.item_title, watcher.current_price, watcher.time_left)
+      twitterer = Twitterer.new(config[:twitter])
+      twitterer.reply_to!(reply_to, message) 
+    end
   end
 end
