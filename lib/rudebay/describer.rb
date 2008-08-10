@@ -3,6 +3,7 @@ module Rudebay
     TEMPLATES = [
       ":time_left out and it's at :current_price",  # "1 hour out and it's at £102"
       ":current_price, and only :time_left to go!", # "141 quid, and only 30 seconds to go"
+      "that :item_title is at :current_price",      # that Peppa Pig pyjamas is at £12.23
     ]
     
     def self.get_a_template
