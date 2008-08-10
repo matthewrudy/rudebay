@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'open-uri'
 require 'hpricot'
-module RudeEbay
+module Rudebay
   # we use hpricot to screenscrape,
   # because the Ebay API setup doesnt work in Firefox 3.
   #

@@ -1,4 +1,4 @@
-module RudeEbay
+module Rudebay
   class Twitterer
     def initialize(username, password)
       @username, @password = username, password
