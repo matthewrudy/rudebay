@@ -1,0 +1,10 @@
+The plan:
+  me:      "Watch #250279150321 for me @rudEbay"
+  rudEbay: "No problem @me, I'll let you know how it goes."
+
+  later that day;
+  rudEbay: "1 hour out and it's at £102"
+  rudEbay: "141 quid, and only 30 seconds to go"
+
+Written in ruby, using WhyTheLuckyStiff's great Hpricot gem.
+And built against the Twitter API
