@@ -21,7 +21,7 @@ module Rudebay
       watcher = Watcher.new(item_id)
       message = Describer.describe!(watcher.item_title, watcher.current_price, watcher.time_left)
       twitterer = Twitterer.new(config[:twitter])
-      twitterer.reply_to!(reply_to, message) 
+      twitterer.reply_to!(reply_to, message, watcher.url) 
     end
   end
 end

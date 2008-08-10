@@ -23,6 +23,10 @@ module Rudebay
       data = open(url).read
     end
     
+    def url
+      self.class.view_item_url(item_id)
+    end
+    
     def item_title
       (@hpricot/"#itemTitle").inner_text # Garlando G500 Football Table
     end

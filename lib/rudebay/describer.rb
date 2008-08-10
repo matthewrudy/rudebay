@@ -11,9 +11,9 @@ module Rudebay
     
     def self.describe!(item_title, current_price, time_left)
       message = get_a_template
-      message.sub!(':time_left',     time_left)
-      message.sub!(':current_price', current_price)
-      message.sub!(':item_title',    item_title)
+      message.sub!(':time_left',     "#{time_left}".strip)
+      message.sub!(':current_price', "#{current_price}".strip)
+      message.sub!(':item_title',    "#{item_title}".strip)
       
       return message
     end
