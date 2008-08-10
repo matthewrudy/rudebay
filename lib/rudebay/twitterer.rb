@@ -1,8 +1,8 @@
 require 'net/http'
 module Rudebay
   class Twitterer
-    def initialize(username, password)
-      @username, @password = username, password
+    def initialize(user_hash)
+      @username, @password = user_hash["username"], user_hash["password"]
     end
     
     def twitter!(status)
